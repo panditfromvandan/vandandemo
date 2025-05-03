@@ -3295,68 +3295,26 @@ p {
   line-height: 60px;
   transition: 0.3s ease;
 }
-.slideshowh2{
-  text-align:center;
-  margin-top: 12%;
-}
-.slideshow-container {
-  max-width: 900px;
-  position: relative;
-   margin:auto;
-  margin-top: 5%;
-  cursor: default;
-}
-
-.text-overlay {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  max-width: 90%;
-  text-align: center;
-  border-radius: 10px;
-}
 .mySlides {
+  display: none;
   position: relative;
-}
-
-.mySlides img {
-  width: 100%;
-  border-radius: 8px;
   height: auto;
 }
 
-.dot-container {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-.slide-content {
+.slide-bg {
+  background: url("assets/images/Testimonials/background.png") no-repeat center center;
+  background-size: cover;
   position: absolute;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  color: #333;
-  background: rgba(255, 255, 255, 0.95);
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
+  inset: 0;
+  opacity: 1;
+  z-index: 0;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  color: #3e2604;
 }
 
 .slide-header {
@@ -3365,13 +3323,14 @@ p {
   align-items: center;
   background: #cc4e14;
   color: #fff;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
 .slide-header h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .lang-tag {
@@ -3383,30 +3342,24 @@ p {
 }
 
 .slide-section {
-  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 .slide-section h4 {
   color: #cc4e14;
-  font-size: 18px;
   margin-bottom: 10px;
-}
-
-.slide-section p {
-  margin-bottom: 10px;
-  line-height: 1.6;
 }
 
 .divider {
   display: flex;
   align-items: center;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
 .divider hr {
   flex: 1;
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cc4e14;
   margin: 0 10px;
 }
 
@@ -3414,11 +3367,19 @@ p {
   width: 35px;
   height: auto;
 }
-/* .myslides-img{
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-  border: 3px solid black;
-  transition: transform 0.3s, box-shadow 0.3s;
-} */
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background: #cc4e14;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 20px;
+}
+
+
 /*# sourceMappingURL=ud-styles.css.map */
