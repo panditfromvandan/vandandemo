@@ -3030,32 +3030,40 @@ p {
 }
 
 /* make the pills big & friendly */
-/* 1) Scrollable pills */
-#langTabs {
-  overflow-x: auto;
-  white-space: nowrap;
+#langTabs .nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  color: #4b2e19;
+  background-color: #fff;
+  transition: background 0.2s, color 0.2s;
 }
-#langTabs .nav-item {
-  display: inline-block;
+#langTabs .nav-link.active {
+  background-color: #b01111;
+  color: #fff;
+}
+#langTabs .nav-link:hover {
+  background-color: #9b5722;
+  color: #fff;
 }
 
-/* 2) Responsive padding & max-width */
+/* content card */
 .tab-pane .bg-white {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  line-height: 1.6;
+  color: #333;
 }
-
-/* 3) Boost mobile text size */
+.tab-pane hr {
+  border-top: 2px dashed #ffcc99;
+}
 @media (max-width: 576px) {
   .tab-pane .bg-white {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
     font-size: 1.05rem;
     line-height: 1.6;
   }
 }
-
 
 /*# sourceMappingURL=ud-styles.css.map */
