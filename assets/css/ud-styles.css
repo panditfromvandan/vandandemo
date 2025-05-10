@@ -718,7 +718,7 @@ p {
   .hero-img-phn{
     display: flex;
     height: 500;
-    margin-top: 10%;
+    margin-top: 0%;
   }
 .hero-img-phn{
   display: none ;
@@ -740,7 +740,7 @@ p {
   .hero-img-phn{
     display: flex;
     height: 500;
-    margin-top: 10%;
+    margin-top: 0%;
   }
 }
 

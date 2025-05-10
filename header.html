@@ -90,18 +90,18 @@
   
  
     .ud-header .navbar {
-  height: 70px; /* Fixed height for header */
-  padding: 0.5rem 1.5rem;
-  display: flex;
-  align-items: center;
-}
+      height: 70px; /* Fixed height for header */
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+    }
 
-.ud-header .navbar-brand img {
-  height: 60px; /* Larger logo */
-  width: auto;
-  object-fit: contain;
-  margin-top: 0px; /* Slight adjustment if needed */
-}
+    .ud-header .navbar-brand img {
+      height: 60px; /* Larger logo */
+      width: auto;
+      object-fit: contain;
+      margin-top: 0px; /* Slight adjustment if needed */
+    }
   
     .ud-header .nav-link {
       font-size: 1.1rem;
@@ -111,7 +111,10 @@
       margin: 0 0.75rem;
       transition: color 0.2s;
     }
-  
+    /* .navbar-collapse {
+      transition: all 0.3s ease-in-out;
+    } */
+
     .ud-header .nav-link:hover {
       color: #b01111 !important;
     }
@@ -121,6 +124,15 @@
         max-height: 45px;
       }
     }
+      @media (max-width: 991.98px) {
+     .navbar-collapse {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+}
+
   </style>
   
    
@@ -226,6 +238,15 @@
     <script src="assets/js/main.js"></script>
  
 
-  
+    <script>
+      document.addEventListener('scroll', function () {
+        const nav = document.querySelector('.navbar-collapse');
+        const bsCollapse = bootstrap.Collapse.getInstance(nav);
+        if (nav.classList.contains('show')) {
+          bsCollapse.hide();
+        }
+      });
+    </script>
+    
 </body>
 </html>
