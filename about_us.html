@@ -148,6 +148,14 @@
         });
       </script>
       
-  
+      <script>
+        document.addEventListener('scroll', function () {
+          const nav = document.querySelector('.navbar-collapse');
+          const bsCollapse = bootstrap.Collapse.getInstance(nav);
+          if (nav.classList.contains('show')) {
+            bsCollapse.hide();
+          }
+        });
+      </script>
 </body>
 </html>

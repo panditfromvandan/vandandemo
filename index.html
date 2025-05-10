@@ -334,7 +334,15 @@
         });
       });
     </script>
-    
+        <script>
+          document.addEventListener('scroll', function () {
+            const nav = document.querySelector('.navbar-collapse');
+            const bsCollapse = bootstrap.Collapse.getInstance(nav);
+            if (nav.classList.contains('show')) {
+              bsCollapse.hide();
+            }
+          });
+        </script>
     <!-- ====== All Javascript Files ====== -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
