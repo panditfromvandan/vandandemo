@@ -1,142 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+<head>
+  <!-- … your head as before … -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!--====== Favicon Icon ======-->
-    <link
-      rel="shortcut icon"
-      href="assets/images/favicon.svg"
-      type="image/svg"
-    />
+    /* --- Sidebar --- */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;           /* adjust as needed */
+      height: 100vh;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+      overflow-y: auto;
+      z-index: 2000;
+      padding-top: 70px;      /* space for your header if any */
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar li {
+      border-bottom: 1px solid #eee;
+    }
+    .sidebar a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .sidebar a:hover {
+      background-color: #f5f5f5;
+      color: #b01111;
+    }
 
-    <!-- ===== All CSS files ===== -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/animate.css" />
-    <link rel="stylesheet" href="assets/css/lineicons.css" />
-    <link rel="stylesheet" href="assets/css/ud-styles.css" />
-  </head>
-  <body>
-    <!-- ====== Header Start ====== -->
-    <header class="ud-header">
-      <div>
-        <div class="row">
-          <div class="note-text btn-success">
-            <div>
-              We do not charge any additional fees from you for the service.
-            </div>
-        </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
-                <img class="startup-logo"
-                src="assets/images/banner/logo.png"
-              />
-              </a>
-              <button class="navbar-toggler">
-                <span class="toggler-icon"> </span>
-                <span class="toggler-icon"> </span>
-                <span class="toggler-icon"> </span>
-              </button>
+    /* --- Main content --- */
+    .main-content {
+      margin-left: 220px;     /* same width as .sidebar */
+      padding: 80px 2rem 2rem;/* top padding to clear fixed header */
+    }
 
-              <div class="navbar-collapse">
-                <ul id="nav" class="navbar-nav mx-auto">
-                  <li class="nav-item">
-                    <a class="ud-submenu-link" href="index.html">Home</a>
-                  </li>
+    /* Optional: make header span full width minus sidebar */
+    .ud-header {
+      left: 220px;            /* push after sidebar */
+      width: calc(100% - 220px);
+    }
+  </style>
+</head>
+<body>
 
-                  <li class="nav-item">
-                    <a class="ud-submenu-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="ud-submenu-link active" href="blog.html">Blog</a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav>
-          </div>
-        </div>
+  <!-- ====== Header (fixed) ====== -->
+  <header class="ud-header">
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/images/logo/canva.jpg" alt="Vandan Logo" style="height:40px;">
+        </a>
+        <!-- … your other header markup … -->
       </div>
-    </header>
-    <!-- ====== Header End ====== -->
+    </nav>
+  </header>
 
-    <!-- ====== Blog Start ====== -->
-    <section class="ud-blog-grids">
-      <div class="container">
-        <div class="row blog-heading"><div class="col-lg-4 col-md-6"><b>Latest Blogs</b></div></div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image">
-                <a href="blog-details.html">
-                  <img src="assets/images/blog/blog-01.jpeg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">29 Mar, 2025</span>
-                <h3 class="ud-blog-title">
-                  <a href="blog-details.html">
-                    Importance of Tracking Each Employee's Learning Journey
-                  </a>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ====== Blog End ====== -->
+  <!-- ====== Sidebar ====== -->
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#marathi">उपनयन पूजा (मराठी)</a></li>
+      <li><a href="#hindi">उपनयन पूजा (हिंदी)</a></li>
+      <li><a href="#english">Upanayan Puja (English)</a></li>
+      <!-- add more links... -->
+      <li><a href="#bhoomipujan-marathi">भूमिपूजन (मराठी)</a></li>
+      <li><a href="#bhoomipujan-hindi">भूमिपूजन (हिंदी)</a></li>
+      <li><a href="#bhoomipujan-english">Bhoomi Pujan (English)</a></li>
+      <!-- … etc … -->
+    </ul>
+  </aside>
 
-    <!-- ====== Footer Start ====== -->
-    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
-      <div class="shape shape-1">
-        <img src="assets/images/footer/shape-1.svg" alt="shape" />
+  <!-- ====== Main Content ====== -->
+  <div class="main-content">
+    <!-- your existing tab-content and sections -->
+    <div class="tab-content">
+      <!-- e.g. -->
+      <div id="marathi" class="tab-pane fade show active">
+        <!-- Upanayan Marathi HTML … -->
       </div>
-      <div class="shape shape-2">
-        <img src="assets/images/footer/shape-2.svg" alt="shape" />
+      <div id="hindi" class="tab-pane fade">
+        <!-- Upanayan Hindi HTML … -->
       </div>
-      <div class="shape shape-3">
-        <img src="assets/images/footer/shape-3.svg" alt="shape" />
+      <div id="english" class="tab-pane fade">
+        <!-- Upanayan English HTML … -->
       </div>
-      <div class="ud-footer-widgets">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="ud-widget">
-                <a href="index.html" class="ud-footer-logo">
-                  <span class="fw-bold text-white startup-logo">NoHassle</span>
-                </a>
-                <p class="ud-widget-desc">
-                  We’re here to effortlessly connect you with top-notch service providers for all your learning and development sourcing needs.
-                </p>
-                <ul class="ud-widget-socials">
-                  <li>
-                  <li>
-                    <a href="https://www.linkedin.com/company/nohasslesourcingpartner">
-                      <i class="lni lni-linkedin-original"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-    </footer>
-    <!-- ====== Footer End ====== -->
+      <!-- etc… -->
+    </div>
+  </div>
 
-    <!-- ====== Back To Top Start ====== -->
-    <a href="javascript:void(0)" class="back-to-top">
-      <i class="lni lni-chevron-up"> </i>
-    </a>
-    <!-- ====== Back To Top End ====== -->
-
-    <!-- ====== All Javascript Files ====== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+  <!-- ====== Scripts ====== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -124,14 +124,39 @@
         max-height: 45px;
       }
     }
-      @media (max-width: 991.98px) {
-     .navbar-collapse {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+    @media (max-width: 991.98px) {
+  /* Always keep the collapse container in the DOM,
+     but move it off-screen until it’s .show */
+  .ud-header .navbar-collapse {
+    position: fixed;
+    top: 70px; /* match header height */
+    right: 0;
+    width: 80%; /* your desired drawer width */
+    height: calc(100vh - 70px);
+    background: #fff;
+    padding: 1rem;
+    overflow-y: auto;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+    
+    /* Start hidden to the right */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1050; /* above most page content */
+  }
+
+  /* When Bootstrap adds .show, slide it in */
+  .ud-header .navbar-collapse.show {
+    transform: translateX(0) !important;
+  }
+
+  /* While it’s animating in/out, override display */
+  .ud-header .navbar-collapse.collapsing {
+    display: block !important;
+    height: auto !important;
+  }
 }
+
+
 
   </style>
   
