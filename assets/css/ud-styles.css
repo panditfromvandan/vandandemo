@@ -694,12 +694,13 @@ p {
   text-align: center;
   position: relative;
   z-index: 1;
+ 
 }
 
 .ud-hero .hero-img{
   max-width: 100%;
   text-align: center;
-  margin-top: -15%;
+  margin-top: -20%;
 }
 
 .hero-img-phn{
@@ -708,7 +709,7 @@ p {
 
 @media (max-width: 767px) {
   .ud-hero .hero-img{
-    margin-top: 12%;
+    margin-top: 5%;
     height: 600px;
   }
 }
@@ -730,7 +731,7 @@ p {
 
 @media (max-width: 767px) {
   .ud-hero .hero-img{
-    margin-top: -12%;
+    margin-top: -20%;
     height: 600px;
   }
 }
@@ -743,7 +744,7 @@ p {
   .hero-img-phn{
     display: flex;
     height: 500;
-    margin-top: -5%;
+    margin-top: -24%;
   }
 }
 
@@ -1866,7 +1867,8 @@ p {
   .brand-name {
     white-space: nowrap;    /* prevents wrapping to next line */
     overflow-x: auto;       /* if it’s too long, lets it scroll horizontally */
-    font-size: 0.9rem;      /* optional: shrink slightly to fit */
+    font-size: 0.10rem; 
+    color: #d97706;     /* optional: shrink slightly to fit */
   }
 }
 .footer-mantra {
