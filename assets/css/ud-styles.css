@@ -1867,7 +1867,7 @@ p {
   .brand-name {
     white-space: nowrap;    /* prevents wrapping to next line */
     overflow-x: auto;       /* if it’s too long, lets it scroll horizontally */
-    font-size:20px; 
+    font-size:19px; 
     color: #d97706;     /* optional: shrink slightly to fit */
   }
 }
