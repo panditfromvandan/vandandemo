@@ -556,197 +556,37 @@ p {
   background: var(--heading-color);
 } */
 
-/* ===== Hero CSS ===== */
-.ud-hero {
-  margin-top: 20%;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.ud-hero .row{
-  --bs-gutter-x: 0px;
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-.navbar-nav.mx-auto{
-  margin-left: auto!important;
-  margin-right: 0 !important;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-.navbar-nav.mx-auto{
-  margin-left: auto!important;
-  margin-right: 0 !important;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .ud-hero {
-    padding-top: 160px;
+@media (max-width: 767.98px) {
+  .hero-img {
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
   }
 }
 
-@media (max-width: 412px) {
-  .ud-hero {
-    margin-top: 24%;
-    margin-top: 24%;
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-img {
+    height: auto;
+    aspect-ratio: 21/9;
+    object-fit: cover;
   }
 }
 
-
-
-.ud-hero-info {
-  color: var(--white);
-  position: relative;
-  margin-top: 20%;
-  position: relative;
-  margin-top: 20%;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-
-
-
-
-.ud-hero-content .ud-hero-desc {
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 35px;
-  text-align: center;
-  color: var(--white);
-  opacity: 0.8;
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 767px) {
-  .ud-hero-content .ud-hero-desc {
-    font-size: 16px;
-    line-height: 30px;
+@media (min-width: 992px) {
+  .hero-img {
+    height: auto;
+    aspect-ratio: 21/7;
+    object-fit: cover;
   }
 }
 
-.ud-hero-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.ud-hero-buttons .ud-main-btn {
-  margin: 8px;
-}
-
-@media (max-width: 767px) {
-  .ud-hero-buttons .ud-main-btn {
-    margin: 5px;
-  }
-}
-
-@media (max-width: 767px) {
-  .ud-hero-buttons .ud-main-btn {
-    padding: 12px 16px;
-  }
-}
-
-.ud-hero-buttons .ud-white-btn {
-  background: var(--white);
-  color: var(--heading-color);
-}
-
-.ud-hero-buttons .ud-white-btn:hover {
-  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  background: #fefefe;
-  color: orange;
-}
-
-.ud-hero-buttons .ud-link-btn:hover {
-  color: var(--white);
-  background: transparent;
-  opacity: 0.5;
-}
-
-.ud-hero-brands-wrapper {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.ud-hero-brands-wrapper img {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0.5;
-  max-width: 250px;
-}
-
-.ud-hero-brands-wrapper img:hover {
-  opacity: 1;
-}
-
-.ud-hero-image {
-  max-width: 80px;
-  /* margin: auto; */
-  text-align: center;
-  position: relative;
-  z-index: 1;
- 
-}
-
-.ud-hero .hero-img{
-  max-width: 100%;
-  text-align: center;
-  margin-top: -20%;
-}
-
-.hero-img-phn{
-  display: none ;
-}
-
-@media (max-width: 767px) {
-  .ud-hero .hero-img{
-    margin-top: 5%;
-    height: 600px;
-  }
-}
-
-@media (max-width:412px){
-  .ud-hero .hero-img
-   {
-    display: none ;
-  }
-  .hero-img-phn{
-    display: flex;
-    height: 500;
-    margin-top: 10%;
-  }
-.hero-img-phn{
-  display: none ;
-}
-}
-
-@media (max-width: 767px) {
-  .ud-hero .hero-img{
-    margin-top: -20%;
-    height: 600px;
-  }
-}
-
-@media (max-width:412px){
-  .ud-hero .hero-img
-   {
-    display: none ;
-  }
-  .hero-img-phn{
-    display: flex;
-    height: 500;
-    margin-top: -24%;
-  }
-}
 
 /* ===== Features CSS ===== */
 #features .container{
