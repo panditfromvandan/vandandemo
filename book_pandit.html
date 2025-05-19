@@ -75,18 +75,20 @@
           <div class="row justify-content-center">
             <div class="col-lg-8">
               <div class="text-center" style="background: #ffffff; padding: 40px 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-                <h2 style="color: #b01111; font-weight: bold; font-size: 2.5rem; margin-bottom: 20px;">About Us</h2>
-                <p style="color: #4b2e19; font-size: 1.1rem; line-height: 1.8;">
-                  <strong>Vandan</strong> is a heartfelt initiative born out of tradition, trust, and technology. We are on a mission to simplify the process of finding experienced and reliable Panditjis for all kinds of religious ceremonies.
-                  <br><br>
-                  This unique platform has been co-founded by a highly respected Panditji from the holy city of Nashik, who brings with him over 20 years of rich experience in performing Vedic rituals and guiding countless families across Maharashtra and beyond.
-                  <br><br>
-                  Joining hands with him are two young and dynamic Chartered Accountants, who bring modern thinking, efficient processes, and a vision to bridge tradition with technology.
-                  <br><br>
-                  At <strong>Vandan</strong>, we believe that faith deserves flawless execution. That’s why we’re building a network of verified Panditjis, customizable puja packages, and a seamless booking experience—so you can focus on your devotion while we take care of the rest.
-                  <br><br>
-                  <em style="color: #b01111;"><strong>Vandan – Where Tradition Meets Technology.</strong></em>
-                </p>
+                <h2 style="color: #b01111; font-weight: bold; font-size: 2.5rem; margin-bottom: 20px;">Book Pandit</h2>
+                <form id="panditBookingForm" style="margin-top: 30px;">
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="service" placeholder="Pooja Service Name" required>
+                    </div>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="location" placeholder="Your Location" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="background-color: #b01111; border: none;">Submit</button>
+                  </form>
+                  
               </div>
             </div>
           </div>
@@ -111,6 +113,20 @@
           .then(data => {
             document.getElementById('footer').innerHTML = data;
           });
+
+          document.getElementById("panditBookingForm").addEventListener("submit", function(e){
+            e.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var service = document.getElementById("service").value;
+            var location = document.getElementById("location").value;
+
+            var message = "Hello, I want to book a Pandit.\nName: " + name + "\nService: " + service + "\nLocation: " + location;
+
+            var whatsappUrl = "https://wa.me/918104030300?text=" + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+});
+
       </script>
     <a href="javascript:void(0)" class="back-to-top">
       <i class="lni lni-chevron-up"> </i>

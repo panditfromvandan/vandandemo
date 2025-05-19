@@ -70,7 +70,7 @@
      <div id="header"></div>
 
 
-     <div class="container" style="background-color: #fff8f0; padding: 60px 0; margin-top: 5%;">
+     <div class="container" style="background-color: #fff8f0;  margin-top: 2%;">
       <div class="row">
         <div class="col-lg-12">
           <div class="ud-section-title text-center mx-auto">
@@ -162,23 +162,50 @@
             document.getElementById('footer').innerHTML = data;
           });
       </script>
-          <script>
-            document.addEventListener('scroll', function () {
-              const nav = document.querySelector('.navbar-collapse');
-              const bsCollapse = bootstrap.Collapse.getInstance(nav);
-              if (nav.classList.contains('show')) {
-                bsCollapse.hide();
-              }
-            });
-          </script>
-    <!-- ====== Footer End ====== -->
-    <a href="https://wa.me/918104030300" class="whatsapp-float" target="_blank">
-      <i class="lni lni-whatsapp"></i>
-    </a>
-    <!-- ====== Back To Top Start ====== -->
-    <a href="javascript:void(0)" class="back-to-top">
-      <i class="lni lni-chevron-up"> </i>
-    </a>
+         <a href="javascript:void(0)" class="back-to-top">
+          <i class="lni lni-chevron-up"> </i>
+        </a>
+            
+            <script>
+              // Show/hide button based on scroll
+              const backToTopButton = document.querySelector('.back-to-top');
+            
+              window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                  backToTopButton.style.display = 'flex';
+                } else {
+                  backToTopButton.style.display = 'none';
+                }
+              });
+            
+              // Scroll to top when clicked
+              backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+              });
+            </script>
+                <script>
+                  document.addEventListener('scroll', function () {
+                    const nav = document.querySelector('.navbar-collapse');
+                    const bsCollapse = bootstrap.Collapse.getInstance(nav);
+                    if (nav.classList.contains('show')) {
+                      bsCollapse.hide();
+                    }
+                  });
+                </script>
+               <script>
+                window.addEventListener('scroll', function() {
+                  var tooltip = document.getElementById('whatsappTooltip');
+                  if (window.scrollY > 150) {
+                    tooltip.classList.add('show');
+                  } else {
+                    tooltip.classList.remove('show');
+                  }
+                });
+              </script>
+  
     <!-- ====== Back To Top End ====== -->
 
     <!-- ====== All Javascript Files ====== -->
@@ -186,27 +213,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        // Show/hide button based on scroll
-        const backToTopButton = document.querySelector('.back-to-top');
-      
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 300) {
-            backToTopButton.style.display = 'flex';
-          } else {
-            backToTopButton.style.display = 'none';
-          }
-        });
-      
-        // Scroll to top when clicked
-        backToTopButton.addEventListener('click', () => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
-        });
-      </script>
-      
+   
   
 </body>
 </html>

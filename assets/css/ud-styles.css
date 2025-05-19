@@ -2915,43 +2915,57 @@ p {
   border-radius: 12px;
   aspect-ratio: 9 / 16;
 }
+/* WhatsApp floating button */
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 28px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  line-height: 60px;
-  transition: 0.3s ease;
-}
-
-.whatsapp-float:hover {
-  background-color: #128C7E;
-  transform: scale(1.1);
-}
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
   color: #fff;
   border-radius: 50%;
-  text-align: center;
   font-size: 28px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-  line-height: 60px;
-  transition: 0.3s ease;
+  padding: 14px;
+  z-index: 9999;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
 }
+
+/* Side tooltip for Book Pandit */
+.whatsapp-tooltip {
+  position: fixed;
+  bottom: 28px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 9998;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  animation: blinkText 1s infinite;
+}
+
+/* Show tooltip on scroll */
+.whatsapp-tooltip.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Blinking animation */
+@keyframes blinkText {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+
+
+
 .mySlides {
   display: none;
   position: relative;

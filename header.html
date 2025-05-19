@@ -88,12 +88,32 @@
     .ud-header .navbar-nav .nav-link:focus {
       color: #e99657 !important;
     }
+    .blinking-tagline {
+      background-color: #b85b27;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.2rem;
+      padding: 10px 0;
+      animation: blink-animation 1s infinite;
+      border-bottom: 2px solid #e99657;
+    }
+
+    @keyframes blink-animation {
+      0%   { color: #ffffff; background-color: #b85b27; }
+      50%  { color: #ffe49c; background-color: #b85b27; }
+      100% { color: #ffffff; background-color: #b85b27; }
+    }
+
+
   </style>
   
    
   </head>
   <body>
     <!-- ====== Header Start ====== -->
+    <div class="blinking-tagline text-center">
+      <strong>Call or WhatsApp Now..To Book Your Pandit <i class="lni lni-phone"></i> 8104030300!</strong>
+    </div>   
   <header class="ud-header">
   <nav class="navbar navbar-expand-lg bg-white">
     <div class="container-fluid">
@@ -115,6 +135,7 @@
         <ul class="navbar-nav mx-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="pooja_services.html">Pooja Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="book_pandit.html">Book a Pandit</a></li>
           <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
         </ul>
       </div>
@@ -140,6 +161,44 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
-    
+<!-- <a href="javascript:void(0)" class="back-to-top">
+  <i class="lni lni-chevron-up"> </i>
+</a> -->
+
+<a href="https://wa.me/918104030300" class="whatsapp-tooltip" id="whatsappTooltip"target="_blank">
+  <i class="lni lni-whatsapp"> Book Pandit</i>
+</a>
+
+<script>
+  // Show/hide button based on scroll
+  const backToTopButton = document.querySelector('.back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.style.display = 'flex';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+
+  // Scroll to top when clicked
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<script>
+  window.addEventListener('scroll', function() {
+    var tooltip = document.getElementById('whatsappTooltip');
+    if (window.scrollY > 150) {
+      tooltip.classList.add('show');
+    } else {
+      tooltip.classList.remove('show');
+    }
+  });
+</script>
+
 </body>
 </html>

@@ -306,14 +306,16 @@
           });
       </script>
     <!-- ====== Footer End ====== -->
-    <a href="https://wa.me/918104030300" class="whatsapp-float" target="_blank">
-      <i class="lni lni-whatsapp"></i>
-    </a>
-    <!-- ====== Back To Top Start ====== -->
-    <a href="javascript:void(0)" class="back-to-top">
-      <i class="lni lni-chevron-up"> </i>
-    </a>
-    <!-- ====== Back To Top End ====== -->
+   <!-- WhatsApp Floating Button -->
+
+
+<!-- Book Pandit Tooltip -->
+<!--  
+<div class="whatsapp-tooltip" id="whatsappTooltip">💬 Book Pandit</div> -->
+<a href="javascript:void(0)" class="back-to-top">
+  <i class="lni lni-chevron-up"> </i>
+</a>
+    
     <script>
       // Show/hide button based on scroll
       const backToTopButton = document.querySelector('.back-to-top');
@@ -343,17 +345,24 @@
             }
           });
         </script>
+       <script>
+        window.addEventListener('scroll', function() {
+          var tooltip = document.getElementById('whatsappTooltip');
+          if (window.scrollY > 150) {
+            tooltip.classList.add('show');
+          } else {
+            tooltip.classList.remove('show');
+          }
+        });
+      </script>
+      
+        
     <!-- ====== All Javascript Files ====== -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-    
 
-     
-  </script>
-   
   <!-- for testimonials -->
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script>
