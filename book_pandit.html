@@ -77,17 +77,45 @@
               <div class="text-center" style="background: #ffffff; padding: 40px 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
                 <h2 style="color: #b01111; font-weight: bold; font-size: 2.5rem; margin-bottom: 20px;">Book Pandit</h2>
                 <form id="panditBookingForm" style="margin-top: 30px;">
-                    <div class="mb-3">
-                      <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    <div class="mb-3 text-start">
+                      <label for="name" class="form-label"><strong>Name:</strong></label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                     </div>
-                    <div class="mb-3">
-                      <input type="text" class="form-control" id="service" placeholder="Pooja Service Name" required>
+                  
+                    <div class="mb-3 text-start">
+                      <label for="service" class="form-label"><strong>Select Pooja Service:</strong></label>
+                      <select class="form-select" id="service" required>
+                        <option value="">-- Select a Service --</option>
+                        <option value="Upanayan Sanskar">Upanayan Sanskar</option>
+                        <option value="Rudrabhishek">Rudrabhishek</option>
+                        <option value="Office Opening Pooja">Office Opening Pooja</option>
+                        <option value="Satyanarayan Pooja">Satyanarayan Pooja</option>
+                        <option value="Griha Pravesh Pooja">Griha Pravesh Pooja</option>
+                        <option value="Navchandi Pooja">Navchandi Pooja</option>
+                        <option value="Bhoomi Pujan">Bhoomi Pujan</option>
+                        <option value="Vastu Shanti Pooja">Vastu Shanti Pooja</option>
+                        <option value="Udak Shanti">Udak Shanti</option>
+                        <option value="Annaprashan">Annaprashan</option>
+                        <option value="Wedding Rituals">Wedding Rituals</option>
+                        <option value="Other">Other</option>
+                      </select>
+
+                      
                     </div>
-                    <div class="mb-3">
-                      <input type="text" class="form-control" id="location" placeholder="Your Location" required>
+                  
+                    <div class="mb-3 text-start">
+                        <label for="poojaMonth" class="form-label"><strong>Month:</strong></label>
+                        <input type="month" class="form-control" id="poojaMonth" required>
+                      </div>
+                      
+                    <div class="mb-3 text-start">
+                      <label for="location" class="form-label"><strong>Location:</strong></label>
+                      <input type="text" class="form-control" id="location" placeholder="Your City / Village" required>
                     </div>
+                  
                     <button type="submit" class="btn btn-primary" style="background-color: #b01111; border: none;">Submit</button>
                   </form>
+                  
                   
               </div>
             </div>
@@ -125,7 +153,14 @@
 
             var whatsappUrl = "https://wa.me/918104030300?text=" + encodeURIComponent(message);
             window.open(whatsappUrl, '_blank');
-});
+          });
+        // Set minimum date for the datepicker to today
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1).toString().padStart(2, '0');
+        var minMonth = year + '-' + month;
+
+        document.getElementById("poojaMonth").setAttribute('min', minMonth);
 
       </script>
     <a href="javascript:void(0)" class="back-to-top">
