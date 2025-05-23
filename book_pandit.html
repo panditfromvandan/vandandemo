@@ -148,8 +148,8 @@
             var name = document.getElementById("name").value;
             var service = document.getElementById("service").value;
             var location = document.getElementById("location").value;
-
-            var message = "Hello, I want to book a Pandit.\nName: " + name + "\nService: " + service + "\nLocation: " + location;
+            var month = document.getElementById("month").value;
+            var message = "Hello, I want to book a Pandit.\nName: " + name + "\nService: " + service + "\Month:" + poojaMonth + "\nLocation: " + location;
 
             var whatsappUrl = "https://wa.me/918104030300?text=" + encodeURIComponent(message);
             window.open(whatsappUrl, '_blank');
