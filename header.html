@@ -91,6 +91,7 @@
     }
 
     .blinking-tagline {
+      position: sticky;
       background-color: #b85b27;
       color: #ffffff;
       font-weight: bold;
@@ -99,7 +100,7 @@
       animation: blink-animation 1s infinite;
       border-bottom: 2px solid #e99657;
     }
-
+ 
     @keyframes blink-animation {
       0%   { color: #ffffff; background-color: #b85b27; }
       50%  { color: #ffe49c; background-color: #b85b27; }
